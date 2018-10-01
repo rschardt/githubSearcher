@@ -9,13 +9,29 @@
 		extra-sbtVersion="1.0"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180927173401"/>
+		date="20181001200314"/>
 	<dependencies>
-		<module organisation="org.scala-sbt" name="global-plugins">
-			<revision name="0.0" status="integration" pubdate="20180927173355" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
-				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
-				<caller organisation="default" name="moovel-build" conf="compile, runtime-internal, runtime, optional" rev="0.0" rev-constraint-default="0.0" rev-constraint-dynamic="0.0" callerrev="0.1.0-SNAPSHOT" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
+		<module organisation="se.marcuslonnberg" name="sbt-docker">
+			<revision name="1.5.0" status="release" pubdate="20171002214703" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/marcuslonnberg/sbt-docker" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+				<license name="MIT License" url="https://github.com/marcuslonnberg/sbt-docker/blob/master/LICENSE"/>
+				<metadata-artifact status="no" details="" size="3260" time="0" location="/root/.ivy2/cache/scala_2.12/sbt_1.0/se.marcuslonnberg/sbt-docker/ivy-1.5.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/se/marcuslonnberg/sbt-docker_2.12_1.0/1.5.0/sbt-docker-1.5.0.pom"/>
+				<caller organisation="default" name="moovel-build" conf="compile, runtime-internal, runtime, optional" rev="1.5.0" rev-constraint-default="1.5.0" rev-constraint-dynamic="1.5.0" callerrev="0.1.0-SNAPSHOT" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
 				<artifacts>
+					<artifact name="sbt-docker" type="jar" ext="jar" status="no" details="" size="188545" time="0" location="/root/.ivy2/cache/scala_2.12/sbt_1.0/se.marcuslonnberg/sbt-docker/jars/sbt-docker-1.5.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/se/marcuslonnberg/sbt-docker_2.12_1.0/1.5.0/sbt-docker-1.5.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-lang3">
+			<revision name="3.5" status="release" pubdate="20161013215341" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
+				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="12365" time="0" location="/root/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.pom"/>
+				<caller organisation="se.marcuslonnberg" name="sbt-docker" conf="default, compile, runtime, master" rev="3.5" rev-constraint-default="3.5" rev-constraint-dynamic="3.5" callerrev="1.5.0"/>
+				<artifacts>
+					<artifact name="commons-lang3" type="jar" ext="jar" status="no" details="" size="479881" time="0" location="/root/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar"/>
+					</artifact>
 				</artifacts>
 			</revision>
 		</module>
